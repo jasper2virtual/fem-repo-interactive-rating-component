@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
-@tailwind components; 
+@tailwind components;
 @tailwind utilities;
+
+$base-font-size: 15px;
+@mixin font-size-px($px-value) {
+  font-size: #{$px-value / $base-font-size}rem;
+}
+
+@layer base {
+  html {
+    font-family: 'Overpass', sans-serif;
+    font-size: $base-font-size;
+  }
+
+  .app-bg-black {
+    background: radial-gradient(circle, #232A34, #181E27);
+  }
+
+  .app-text-heading-large {
+    @apply font-bold tracking-normal;
+    @include font-size-px(28px);
+  }
+  .app-text-heading-medium{
+    @apply font-bold tracking-[2px];
+    @include font-size-px(15px);
+  }
+  .app-text-rating{
+    @apply font-bold leading-6 tracking-[0.2px];
+    @include font-size-px(16px);
+  }
+  .app-text-body{
+    @apply leading-6 tracking-normal;
+    @include font-size-px(15px);
+  }
+}
