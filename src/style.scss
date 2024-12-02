@@ -5,34 +5,33 @@
 @tailwind utilities;
 
 $base-font-size: 15px;
-@mixin font-size-px($px-value) {
-  font-size: #{$px-value / $base-font-size}rem;
-}
-
 @layer base {
   html {
     font-family: 'Overpass', sans-serif;
     font-size: $base-font-size;
   }
 
-  .app-bg-black {
+  .app-circle-bg {
     background: radial-gradient(circle, #232A34, #181E27);
+    @apply rounded-full aspect-square grid place-content-center;
   }
 
   .app-text-heading-large {
     @apply font-bold tracking-normal;
-    @include font-size-px(28px);
+    font-size: calc(28px/$base-font-size);
   }
   .app-text-heading-medium{
-    @apply font-bold tracking-[2px];
-    @include font-size-px(15px);
+    @apply font-bold;
+    letter-spacing: calc(2px/$base-font-size);
+    font-size: calc(15px/$base-font-size);
   }
   .app-text-rating{
-    @apply font-bold leading-6 tracking-[0.2px];
-    @include font-size-px(16px);
+    @apply font-bold leading-6;
+    letter-spacing: calc(0.2px/$base-font-size);
+    font-size: calc(16px/$base-font-size);
   }
   .app-text-body{
     @apply leading-6 tracking-normal;
-    @include font-size-px(15px);
+    font-size: calc(15px/$base-font-size);
   }
 }
