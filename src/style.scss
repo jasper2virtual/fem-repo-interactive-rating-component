@@ -4,11 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-$base-font-size: 15px;
+$base-font-size: clamp(0.875rem, 0.853rem + 0.094vw, 0.938rem);
+
 @layer base {
   html {
     font-family: 'Overpass', sans-serif;
     font-size: $base-font-size;
+    @apply leading-6 tracking-normal;
   }
 
   .app-circle-bg {
@@ -18,20 +20,19 @@ $base-font-size: 15px;
 
   .app-text-heading-large {
     @apply font-bold tracking-normal;
-    font-size: calc(28px/$base-font-size);
+    font-size: 1.87rem;
   }
-  .app-text-heading-medium{
+
+  .app-text-heading-medium {
     @apply font-bold;
-    letter-spacing: calc(2px/$base-font-size);
-    font-size: calc(15px/$base-font-size);
+    letter-spacing: .13rem;
   }
-  .app-text-rating{
+
+  .app-text-rating {
     @apply font-bold leading-6;
-    letter-spacing: calc(0.2px/$base-font-size);
-    font-size: calc(16px/$base-font-size);
+    letter-spacing: .013rem;
+    font-size: 1.07rem;
   }
-  .app-text-body{
-    @apply leading-6 tracking-normal;
-    font-size: calc(15px/$base-font-size);
-  }
+
+
 }
