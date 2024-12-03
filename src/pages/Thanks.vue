@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import SingleCard from '/src/templates/SingleCard.vue'
+import SingleCard from '../templates/SingleCard.vue'
 import { useRoute } from 'vue-router';
 const route = useRoute();
 const rate = route.params.rate;

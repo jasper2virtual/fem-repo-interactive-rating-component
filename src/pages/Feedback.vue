@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import SingleCard from '/src/templates/SingleCard.vue'
+import SingleCard from '../templates/SingleCard.vue'
 const router = useRouter()
 const rateSelected = ref(0)
 
